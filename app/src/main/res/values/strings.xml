@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ImageToText</string>
+    <string name="upload_an_image">Upload an Image!</string>
+    <string name="prompts_user_to_upload_an_image">Prompts user to upload an image</string>
+    <string name="displays_captured_image">Displays captured image</string>
+    <string name="removes_image_from_image_view">Removes image from Image View</string>
+    <string name="clear_results">Clear Results</string>
+</resources>

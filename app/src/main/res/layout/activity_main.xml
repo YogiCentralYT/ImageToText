@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FDD7D5"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/upload_an_image"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:translationY="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="299dp"
+        android:layout_height="253dp"
+        android:layout_marginTop="197dp"
+        android:layout_marginBottom="252dp"
+        android:backgroundTint="#783232"
+        android:contentDescription="@string/prompts_user_to_upload_an_image"
+        android:translationY="-85dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/capturedImageView"
+        android:layout_width="299dp"
+        android:layout_height="253dp"
+        android:contentDescription="@string/displays_captured_image"
+        android:scaleType="centerCrop"
+        android:translationY="-85dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/clearResults"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#783232"
+        android:text="@string/clear_results"
+        android:textColorLink="#FFFFFF"
+        android:translationY="-85dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.592"
+        tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="328dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="-40dp"
+        android:background="#D1E9FD"
+        android:translationY="-155dp"
+        app:layout_constraintBottom_toTopOf="@+id/clearResults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <TextView
+            android:id="@+id/textOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="200"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            android:textColor="#783232"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
